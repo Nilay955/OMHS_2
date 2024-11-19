@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaidMatch - Find Your Perfect Home Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hero-section">
+            <div class="logo">
+                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80&w=100" alt="MaidMatch Logo" class="logo-img">
+                <h1>MaidMatch</h1>
+            </div>
+            <h2>Find Your Perfect Home Assistant</h2>
+            <p>Connect with verified professional housekeepers and make your home sparkle. Join thousands of satisfied households today.</p>
+            <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&q=80&w=800" alt="Cleaning Service" class="hero-image">
+        </div>
+
+        <div class="auth-container">
+            <div class="tabs">
+                <button class="tab active" data-tab="login">Login</button>
+                <button class="tab" data-tab="signup">Sign Up</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="form">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" required placeholder="you@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required placeholder="••••••••">
+                </div>
+                <div class="remember-forgot">
+                    <label class="remember">
+                        <input type="checkbox" id="rememberMe">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="submit-btn">Sign In</button>
+                <p class="switch-text">
+                    Don't have an account? <a href="#" class="switch-link" data-switch="signup">Sign up now</a>
+                </p>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signupForm" class="form hidden">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" required placeholder="Guest User">
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email Address</label>
+                    <input type="email" id="signupEmail" required placeholder="you@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required placeholder="••••••••">
+                </div>
+                <div class="form-group">
+                    <label for="signupAddress">Home Address</label>
+                    <textarea id="signupAddress" required placeholder="Enter your complete address" rows="3"></textarea>
+                </div>
+                <div class="terms">
+                    <label class="remember">
+                        <input type="checkbox" id="terms" required>
+                        <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
+                    </label>
+                </div>
+                <button type="submit" class="submit-btn">Create Account</button>
+                <p class="switch-text">
+                    Already have an account? <a href="#" class="switch-link" data-switch="login">Login here</a>
+                </p>
+            </form>
+
+            <!-- Forgot Password Form -->
+            <form id="forgotPasswordForm" class="form hidden">
+                <h3>Forgot Password</h3>
+                <p class="form-description">Enter your email address and we'll send you an OTP to reset your password.</p>
+                <div class="form-group">
+                    <label for="forgotEmail">Email Address</label>
+                    <input type="email" id="forgotEmail" required placeholder="you@example.com">
+                </div>
+                <button type="submit" class="submit-btn">Send OTP</button>
+                <button type="button" class="back-btn" onclick="document.getElementById('loginForm').classList.remove('hidden'); this.parentElement.classList.add('hidden');">
+                    Back to Login
+                </button>
+            </form>
+
+            <!-- OTP Verification Form -->
+            <form id="otpVerificationForm" class="form hidden">
+                <h3>Enter OTP</h3>
+                <p class="form-description">Please enter the 6-digit code sent to your email.</p>
+                <div class="form-group">
+                    <label for="otpInput">OTP Code</label>
+                    <input type="text" id="otpInput" required maxlength="6" pattern="[0-9]{6}" placeholder="Enter 6-digit OTP">
+                </div>
+                <button type="submit" class="submit-btn">Verify OTP</button>
+                <p class="resend-text">
+                    Didn't receive the code? <a href="#" onclick="resendOTP(event)">Resend OTP</a>
+                </p>
+            </form>
+
+            <!-- Reset Password Form -->
+            <form id="resetPasswordForm" class="form hidden">
+                <h3>Reset Password</h3>
+                <p class="form-description">Please enter your new password.</p>
+                <div class="form-group">
+                    <label for="newPassword">New Password</label>
+                    <input type="password" id="newPassword" required placeholder="Enter new password">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required placeholder="Confirm new password">
+                </div>
+                <button type="submit" class="submit-btn">Reset Password</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

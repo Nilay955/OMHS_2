@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaidMatch - Your Trusted Home Services Partner</title>
+    <link rel="stylesheet" href="home-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80&w=100" alt="MaidMatch Logo" class="nav-logo">
+            <h1>MaidMatch</h1>
+        </div>
+        <div class="nav-buttons">
+            <button onclick="window.location.href='auth.html#login'" class="login-btn">Login</button>
+            <button onclick="window.location.href='auth.html#signup'" class="signup-btn">Sign Up</button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Find Your Perfect Home Assistant</h1>
+                <p>Connect with verified professional housekeepers and make your home sparkle.</p>
+                <div class="hero-buttons">
+                    <button onclick="window.location.href='auth.html#signup'" class="cta-btn">
+                        Get Started <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button onclick="scrollToSection('how-it-works')" class="secondary-btn">
+                        How it Works <i class="fas fa-play"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&q=80&w=800" alt="Cleaning Service">
+            </div>
+        </section>
+
+        <section id="how-it-works" class="features">
+            <h2>How It Works</h2>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>1. Sign Up</h3>
+                    <p>Create your account in minutes and tell us about your needs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>2. Find Matches</h3>
+                    <p>Browse through verified professionals and find your perfect match.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>3. Book Services</h3>
+                    <p>Schedule services at your convenience with secure booking.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <h2>Why Choose MaidMatch?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Verified Professionals</h3>
+                    <p>All our maids undergo thorough background checks.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Book services that fit your schedule.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-star"></i>
+                    <h3>Quality Service</h3>
+                    <p>Rated 4.8/5 by satisfied customers.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Satisfaction Guaranteed</h3>
+                    <p>Your satisfaction is our top priority.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="cta-content">
+                <h2>Ready to Get Started?</h2>
+                <p>Join thousands of satisfied households today.</p>
+                <button onclick="window.location.href='auth.html#signup'" class="cta-btn">
+                    Create Free Account <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MaidMatch</h3>
+                <p>Making home maintenance easier, one match at a time.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="auth.html">Login</a></li>
+                    <li><a href="auth.html">Sign Up</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> support@maidmatch.com</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MaidMatch. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+</html>
